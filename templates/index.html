@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PlanForge | AI-Powered Project Planner</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Animated gradient background (replaces static blobs) -->
+<div class="animated-bg"></div>
+
+<!-- Floating particles container -->
+<div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<div class="main-wrapper">
+    
+    <div class="hero-section">
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                AI Powered Project Planner
+            </div>
+            
+            <img
+                src="{{ url_for('static', filename='PlanForge2.png') }}"
+                alt="PlanForge Logo"
+                class="logo-hero"
+            >
+            
+            <h1>Turn Ideas Into <span class="gradient-text">Execution Plans</span></h1>
+            
+            <!-- AI Typing Effect -->
+            <div class="typing-wrapper">
+                <p class="typing-text"></p>
+            </div>
+            
+            <p class="hero-description">
+                Generate intelligent timelines, team estimations, risk analysis, 
+                roadmap planning and technical documentation in seconds.
+            </p>
+            
+            <!-- Feature Cards -->
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <span>Timeline Generation</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <span>Team Estimation</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚠️</div>
+                    <span>Risk Analysis</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <span>Roadmap Planning</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right column: Floating Illustration -->
+        <div class="hero-visual">
+            <div class="floating-illustration">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="roadmap-svg">
+                    <!-- AI Brain / Roadmap illustration -->
+                    <circle cx="200" cy="200" r="120" fill="url(#gradCircle)" opacity="0.15"/>
+                    <circle cx="200" cy="200" r="90" fill="url(#gradCircle2)" opacity="0.25"/>
+                    
+                    <!-- Central AI Brain node -->
+                    <circle cx="200" cy="200" r="45" fill="#9F7AEA" opacity="0.9">
+                        <animate attributeName="r" values="45;48;45" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="200" y="207" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="sans-serif">AI</text>
+                    
+                    <!-- Connecting nodes (roadmap) -->
+                    <circle cx="140" cy="140" r="18" fill="#7F5AF0" opacity="0.8">
+                        <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="270" cy="150" r="16" fill="#B8A9F0" opacity="0.8">
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="260" cy="260" r="20" fill="#9F7AEA" opacity="0.8">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="130" cy="260" r="14" fill="#7F5AF0" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.2s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <!-- Connection lines (roadmap paths) -->
+                    <line x1="140" y1="140" x2="200" y2="200" stroke="#9F7AEA" stroke-width="2" stroke-dasharray="6,6" opacity="0.6">
+                        <animate attributeName="stroke-dashoffset" values="0;20" dur="1.5s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="270" y1="150" x2="200" y2="200" stroke="#B8A9F0" stroke-width="2" stroke-dasharray="6,6" opacity="0.6">
+                        <animate attributeName="stroke-dashoffset" values="0;20" dur="1.8s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="260" y1="260" x2="200" y2="200" stroke="#9F7AEA" stroke-width="2" stroke-dasharray="6,6" opacity="0.6">
+                        <animate attributeName="stroke-dashoffset" values="0;20" dur="2s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="130" y1="260" x2="200" y2="200" stroke="#7F5AF0" stroke-width="2" stroke-dasharray="6,6" opacity="0.6">
+                        <animate attributeName="stroke-dashoffset" values="0;20" dur="1.6s" repeatCount="indefinite"/>
+                    </line>
+                    
+                    <defs>
+                        <linearGradient id="gradCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#9F7AEA"/>
+                            <stop offset="100%" stop-color="#7F5AF0"/>
+                        </linearGradient>
+                        <linearGradient id="gradCircle2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#B8A9F0"/>
+                            <stop offset="100%" stop-color="#A892D8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                
+                <!-- Floating dashboard mockup elements -->
+                <div class="floating-card card1">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+                </div>
+                <div class="floating-card card2">
+                    <div class="progress-bar"></div>
+                    <div class="stats-row">
+                        <span>✓</span>
+                        <span>Roadmap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Capabilities Section -->
+    <div class="stats">
+
+        <div class="stat-item">
+            <h3>AI-Powered</h3>
+            <p>Intelligent project estimation</p>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+            <h3>Multi-Domain</h3>
+            <p>Software, AI, Research & Engineering</p>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+            <h3>Instant Reports</h3>
+            <p>Export-ready PDF documentation</p>
+        </div>
+
+    </div>
+    
+    <!-- Glassmorphism Form Container -->
+    <div class="glass-container">
+        <form action="/analyze" method="POST">
+            <div class="form-header">
+                <span class="form-badge">Start Your Project</span>
+                <h2>Generate Intelligent Plan</h2>
+            </div>
+            
+            <textarea
+                name="project"
+                placeholder="Describe your project idea, requirements, deliverables, constraints and objectives in detail... (e.g., 'Build a mobile app for task management with user authentication and real-time sync')"
+                required
+            ></textarea>
+
+            <div class="schedule-grid">
+                <div class="input-group">
+                    <label>⏱️ Hours per day</label>
+                    <input
+                        type="number"
+                        name="hours_per_day"
+                        min="1"
+                        step="0.5"
+                        value="8"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>📅 Days per week</label>
+                    <input
+                        type="number"
+                        name="days_per_week"
+                        min="1"
+                        max="7"
+                        value="5"
+                        required
+                    >
+                </div>
+            </div>
+
+            <button type="submit">
+                <span>Analyze & Generate Plan</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // AI Typing Effect - dynamic text loop
+    (function() {
+        const phrases = [
+            "Building roadmap...",
+            "Analyzing requirements...",
+            "Generating timeline...",
+            "Estimating team size...",
+            "Calculating risks...",
+            "Ready to plan!"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.querySelector('.typing-text');
+        
+        if (!typingElement) return;
+        
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            // Add blinking cursor style
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000); // Pause at end
+                return;
+            }
+            
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeEffect, 300);
+                return;
+            }
+            
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeEffect, speed);
+        }
+        
+        // Start typing animation after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeEffect, 500);
+        });
+    })();
+</script>
+
+</body>
+</html>
