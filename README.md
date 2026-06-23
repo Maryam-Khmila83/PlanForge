@@ -8,6 +8,13 @@ Designed for engineers, founders, students, and project managers, it helps evalu
 
 Note: PlanForge currently uses the free tier of the Google Gemini API. During periods of high demand, analysis requests may occasionally fail or be delayed. If this occurs, simply retry after a short wait.
 
+
+## 🌐 Live Application:
+https://planforge-r3dd.onrender.com
+
+## 🎥 LinkedIn Demo Video:
+https://www.linkedin.com/posts/maryam-khmila-5011132b0_ai-promptengineering-python-activity-7474879046896553984-SlxL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAErEdBEBmg0zraDrtmro6_IiLernnl7tex8
+
 ## Features
 
 * Complexity assessment
@@ -46,3 +53,4 @@ Note: PlanForge currently uses the free tier of the Google Gemini API. During pe
 * Cost estimation
 * Interactive dashboards
 * Multiple export formats
+
