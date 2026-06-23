@@ -6,7 +6,7 @@ PlanForge is an AI-powered web application that transforms project ideas into st
 
 Designed for engineers, founders, students, and project managers, it helps evaluate project feasibility, estimate effort, identify risks, and generate professional planning reports across multiple domains including Software, AI, Mechanical, Civil, Electrical, and Research projects.
 
-Note: PlanForge currently uses the free tier of the Google Gemini API. During periods of high demand, analysis requests may occasionally fail or be delayed. If this occurs, simply retry after a short wait.
+# ⚠️ Note: PlanForge currently uses the free tier of the Google Gemini API. During periods of high demand, analysis requests may occasionally fail or be delayed. If this occurs, simply retry after a short wait.
 
 
 ## 🌐 Live Application:
